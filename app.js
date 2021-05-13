@@ -1,4 +1,9 @@
-
+/**
+ * @param  {} string palabra a validar, ya que el memorizador se encarga de agregar o descartar
+ */
+function cuatroElementosRepetidos(string){
+    
+}
 /**
  * @param  {} dataStrings arreglo de strings de longitud n, 
  * a su vez cada string debe tener una longitud n solo pudiendo contener las letras A,T,C,G
@@ -18,12 +23,13 @@ function isMutant(dataStrings){
             mutantDI : "",
         }
         for(j= 0 ; j<n ; j++){
+            //Obtencion elemento de la recta
             let actualHor = dataStrings[i][j]
             let actualVer = dataStrings[j][i]
             let actualID = j+i<n ? dataStrings[j+i][j] : null
             let actualDI = n-1-j+i < n ? dataStrings[j][n-1-j+i] : null
-            
-            //Obtencion de rectas
+
+            //Acumulado rectas
             horizontal+=actualHor
             vertical +=actualVer
             if(actualID) diagonalID += actualID
@@ -35,7 +41,7 @@ function isMutant(dataStrings){
             if(memory.mutantHor === ""){
                 memory["mutantHor"] = dataStrings[i][j]
             }else{
-                //Si la ultima letra del memorizador es igual a la actual se agrega (y luego verificar)
+                //Si la ultima letra del memorizador es igual a la actual se agrega (para luego verificar)
                 if(memory.mutantHor.slice(-1)[0] === dataStrings[i][j]){
                     memory["mutantHor"] += dataStrings[i][j]
                 }
@@ -44,17 +50,19 @@ function isMutant(dataStrings){
                     memory["mutantHor"] = dataStrings[i][j]
                 }
             }
-            console.log(memory.mutantHor)
 
+            if(memory.mutantHor.length === 4){
+                return true
+            }
         }
     }
     return false
 
 }
 let data = [
-    "AAAAA",
+    "AAACB",
     "12345",
-    "ABCDE",
+    "ATTTT",
     "12345",
     "ABCDE",
 ]
