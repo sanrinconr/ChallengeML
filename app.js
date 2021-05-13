@@ -39,31 +39,98 @@ function isMutant(dataStrings){
             //Horizontal
             //Si el memorizador esta vacio se ingresa la actual letra
             if(memory.mutantHor === ""){
-                memory["mutantHor"] = dataStrings[i][j]
+                memory["mutantHor"] = actualHor
             }else{
                 //Si la ultima letra del memorizador es igual a la actual se agrega (para luego verificar)
-                if(memory.mutantHor.slice(-1)[0] === dataStrings[i][j]){
-                    memory["mutantHor"] += dataStrings[i][j]
+                if(memory.mutantHor.slice(-1)[0] === actualHor){
+                    memory["mutantHor"] += actualHor
                 }
                 //Sino se descarta, pues son distintos y no existe posibilidad de adn mutante
                 else{
-                    memory["mutantHor"] = dataStrings[i][j]
+                    memory["mutantHor"] = actualHor
                 }
             }
 
             if(memory.mutantHor.length === 4){
                 return true
             }
+
+
+            //Vertical
+            //Si el memorizador esta vacio se ingresa la actual letra
+            if(memory.mutantVer === ""){
+                memory["mutantVer"] = actualVer
+            }else{
+                //Si la ultima letra del memorizador es igual a la actual se agrega (para luego verificar)
+                if(memory.mutantVer.slice(-1)[0] === actualVer){
+                    memory["mutantVer"] += actualVer
+                }
+                //Sino se descarta, pues son distintos y no existe posibilidad de adn mutante
+                else{
+                    memory["mutantVer"] = actualVer
+                }
+            }
+
+            if(memory.mutantVer.length === 4){
+                return true
+            }
+
+
+            //Diagonal izquierda - derecha
+            //Si el memorizador esta vacio se ingresa la actual letra
+            if(actualID){
+                if(memory.mutantID === ""){
+                    memory["mutantID"] = actualID
+                }else{
+                    //Si la ultima letra del memorizador es igual a la actual se agrega (para luego verificar)
+                    if(memory.mutantID.slice(-1)[0] === actualID){
+                        memory["mutantID"] += actualID
+                    }
+                    //Sino se descarta, pues son distintos y no existe posibilidad de adn mutante
+                    else{
+                        memory["mutantID"] = actualID
+                    }
+                }
+            }
+
+            if(memory.mutantID.length === 4){
+                return true
+            }
+
+
+            //Diagonal derecha - izquierda
+            //Si el memorizador esta vacio se ingresa la actual letra
+            if(actualDI){
+                if(memory.mutantDI === ""){
+                    memory["mutantDI"] = actualDI
+                }else{
+                    //Si la ultima letra del memorizador es igual a la actual se agrega (para luego verificar)
+                    if(memory.mutantDI.slice(-1)[0] === actualDI){
+                        memory["mutantDI"] += actualDI
+                    }
+                    //Sino se descarta, pues son distintos y no existe posibilidad de adn mutante
+                    else{
+                        memory["mutantDI"] = actualDI
+                    }
+                }
+            }
+
+            if(memory.mutantDI.length === 4){
+                return true
+            }
+
+            
+
         }
     }
     return false
 
 }
 let data = [
-    "AAACB",
-    "12345",
-    "ATTTT",
-    "12345",
-    "ABCDE",
+    "ZACCB",
+    "AZ3V5",
+    "AAVTT",
+    "BV345",
+    "VBCDE",
 ]
 console.log(isMutant(data))
