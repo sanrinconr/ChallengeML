@@ -18,20 +18,17 @@ function isMutant(dataStrings){
             mutantDI : "",
         }
         for(j= 0 ; j<n ; j++){
-            //Obtencion de horizontal
-            horizontal+=dataStrings[i][j]
-            //Obtencion de diagonal izquierda a derecha
-            if(j+i<dataStrings.length){
-                diagonalID += dataStrings[j+i][j]
-            }
-            //Obtencion de vertical
-            vertical +=dataStrings[j][i]
-            //Obtencion de diagonal derecha a izquierda
-            if(n-1-j+i < n){
-                diagonalDI += dataStrings[j][n-1-j+i]
-            }
+            let actualHor = dataStrings[i][j]
+            let actualVer = dataStrings[j][i]
+            let actualID = j+i<n ? dataStrings[j+i][j] : null
+            let actualDI = n-1-j+i < n ? dataStrings[j][n-1-j+i] : null
+            
+            //Obtencion de rectas
+            horizontal+=actualHor
+            vertical +=actualVer
+            if(actualID) diagonalID += actualID
+            if(actualDI) diagonalDI += actualDI
 
-            //Se agregan datos a los memorizadores
 
             //Horizontal
             //Si el memorizador esta vacio se ingresa la actual letra
