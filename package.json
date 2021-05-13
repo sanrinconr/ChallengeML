@@ -1,0 +1,26 @@
+{
+  "name": "challengeml",
+  "version": "1.0.0",
+  "description": "Challenge para mercado libre",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanrinconr/ChallengeML.git"
+  },
+  "author": "Santiago Rincon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanrinconr/ChallengeML/issues"
+  },
+  "homepage": "https://github.com/sanrinconr/ChallengeML#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0"
+  }
+}
