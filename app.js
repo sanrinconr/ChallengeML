@@ -1,6 +1,6 @@
 const isMutant = require("./services/ADNService")
 var fs = require('fs');
-let data  = fs.readFileSync('./test/dataTesting/random500.data').toString().split("\n");
+let data  = fs.readFileSync('./test/dataTesting/mutants/data1000.data').toString().split("\n");
 
 var start = Date.now();
 let result = isMutant(data)

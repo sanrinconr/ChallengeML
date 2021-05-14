@@ -88,62 +88,17 @@ function isMutant(dataStrings) {
 					}
                     //Si algun memorizador llega a ser de longitud 4, mutante encontrado
                     if(memory[k].length === 4){
-                        if (k == 0) console.log(`HOR Fila: ${i+1} columna: ${j+1} = ${dataStrings[i][j]}`)
-                        else if (k == 1) console.log(`VER Fila: ${j+1} columna: ${i+1} = ${dataStrings[j][i]}`)
-                        else if (k == 2 && actualIDinf) console.log(`ID Fila: ${j + i+1} columna: ${j+1} = ${dataStrings[j + i][j]}`)
-                        else if (k == 3 && actualIDsup) console.log(`ID Fila: ${j - i+1} columna: ${j+1} = ${dataStrings[j - i][j]}`)
-                        else if (k == 4 && actualDIinf) console.log(`DI Fila: ${j+1} columna: ${n - 1 - j + i+1} = ${dataStrings[j][n - 1 - j + i]}`)
-                        else if (k == 5 && actualDIsup) console.log(`DI Fila: ${j+1} columna: ${n - 1 - j - i+1} = ${dataStrings[j][n - 1 - j - i]}`)
+						//Datos informativos, posicion del adn mutante
+                        // if (k == 0) console.log(`HOR Fila: ${i+1} columna: ${j+1} = ${dataStrings[i][j]}`)
+                        // else if (k == 1) console.log(`VER Fila: ${j+1} columna: ${i+1} = ${dataStrings[j][i]}`)
+                        // else if (k == 2 && actualIDinf) console.log(`ID Fila: ${j + i+1} columna: ${j+1} = ${dataStrings[j + i][j]}`)
+                        // else if (k == 3 && actualIDsup) console.log(`ID Fila: ${j - i+1} columna: ${j+1} = ${dataStrings[j - i][j]}`)
+                        // else if (k == 4 && actualDIinf) console.log(`DI Fila: ${j+1} columna: ${n - 1 - j + i+1} = ${dataStrings[j][n - 1 - j + i]}`)
+                        // else if (k == 5 && actualDIsup) console.log(`DI Fila: ${j+1} columna: ${n - 1 - j - i+1} = ${dataStrings[j][n - 1 - j - i]}`)
                         return true
                     }
 				}
 			}
-			// if (memory.mutantHor === "") {
-			// 	memory["mutantHor"] = actualHor
-			// } else {
-			// 	//Si la ultima letra del memorizador es igual a la actual se agrega (para luego verificar)
-			// 	if (memory.mutantHor.slice(-1)[0] === actualHor) memory["mutantHor"] += actualHor
-			// 	//Sino se descarta, pues son distintos y no existe posibilidad de adn mutante
-			// 	else memory["mutantHor"] = actualHor
-			// }
-			// //Hay 4 letras iguales asi que es mutante
-			// if (memory.mutantHor.length === 4) return true
-
-
-			// //Vertical (igual a horizontal)
-			// if (memory.mutantVer === "") {
-			// 	memory["mutantVer"] = actualVer
-			// } else {
-			// 	if (memory.mutantVer.slice(-1)[0] === actualVer) memory["mutantVer"] += actualVer
-			// 	else memory["mutantVer"] = actualVer
-			// }
-			// if (memory.mutantVer.length === 4) return true
-
-
-			// //Igual a horizontal, solo que se valida que actualIDinf no sea null (por que se puede dar el caso que el punto actual de la diagonal se salga de la matriz)
-			// if (actualIDinf) {
-			// 	if (memory.mutantIDinf === "") {
-			// 		memory["mutantIDinf"] = actualIDinf
-			// 	} else {
-			// 		if (memory.mutantIDinf.slice(-1)[0] === actualIDinf) memory["mutantIDinf"] += actualIDinf
-			// 		else memory["mutantIDinf"] = actualIDinf
-			// 	}
-			// }
-			// if (memory.mutantIDinf.length === 4) return true
-
-
-			// //Diagonal derecha - izquierda, igual que IDinf
-			// if (actualDIinf) {
-			// 	if (memory.mutantDIinf === "") {
-			// 		memory["mutantDIinf"] = actualDIinf
-			// 	} else {
-			// 		if (memory.mutantDIinf.slice(-1)[0] === actualDIinf) memory["mutantDIinf"] += actualDIinf
-			// 		else memory["mutantDIinf"] = actualDIinf
-			// 	}
-			// }
-			// if (memory.mutantDIinf.length === 4) {
-			// 	return true
-			// }
 		}
 	}
 	return false
