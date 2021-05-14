@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/sanrinconr/ChallengeML/issues"
   },
-  "homepage": "https://github.com/sanrinconr/ChallengeML#readme",
+  "homepage": "https://github.com/sanrinconr/ChallengeML#Examen-mercadolibre",
   "dependencies": {
     "chai": "^4.3.4",
     "mocha": "^8.4.0"
