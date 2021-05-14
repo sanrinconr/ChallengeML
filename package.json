@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "mocha --timeout 30000 ",
-    "start": "node app.js"
+    "start": "node app.js",
+    "genData": "node utils/savePersistentData.js"
   },
   "repository": {
     "type": "git",

@@ -24,6 +24,11 @@ fs.writeFileSync(`${route}/data8.data`, data8.join('\n'));
 fs.writeFileSync(`${route}/data100.data`, data100.join('\n'));
 fs.writeFileSync(`${route}/data1000.data`, data1000.join('\n'));
 fs.writeFileSync(`${route}/data5000.data`, data5000.join('\n'));
-fs.writeFileSync(`./test/dataTesting/random500.data`, random500.join('\n'));
+fs.writeFileSync(`${route}/random500.data`, random500.join('\n'));
 
+fs.writeFileSync(`${route}/data8.json`, JSON.stringify({"dna":data8}));
+fs.writeFileSync(`${route}/data100.json`, JSON.stringify({"dna":data100}));
+fs.writeFileSync(`${route}/data1000.json`, JSON.stringify({"dna":data1000}));
+fs.writeFileSync(`${route}/data5000.json`, JSON.stringify({"dna":data5000}));
+fs.writeFileSync(`${route}/random500.json`, JSON.stringify({"dna":random500}));
 // var array = fs.readFileSync('./test.data').toString().split("\n");
