@@ -68,7 +68,7 @@ Lo mismo aplica para diagonal paralela y así entonces se tiene todo el tablero 
 Esto no afecta el rendimiento del programa.
 
 
-[Volver al readme principal](../README.md)
+[Volver al readme principal](../README.md#Documentación)
 
  
 
