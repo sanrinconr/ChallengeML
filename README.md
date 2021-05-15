@@ -1,4 +1,7 @@
- # Como ejecutar
+# Mutantes ADN
+
+Examen de aplicacion para mercado libre el cual consiste en la implementacion de un algoritmo que sea capaz de detectar el ADN de un mutante ([ver consigna](./docs/implementacionAlgoritmo.md#Consigna))
+# Como ejecutar
 ## Entorno produccion
 El entorno se encuentra alojado listo para recibir peticiones en:
 ```
