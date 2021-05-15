@@ -46,7 +46,7 @@ Ya que emplear ciclos anidados para cada recta haría muy costoso la búsqueda (
 - La línea diagonal (roja) será ( j, n - 1 - j + i ) donde n es la longitud de la matriz
  
 ### ¡Resultados!, no muy buenos
-Con esta idea se obtienen las rectas y al final de cada iteración verifica si es o no mutante (la recta), así el tiempo el tiempo de ejecución se ve reducido a:
+Con esta idea se obtienen las rectas y al final de cada iteración se verifica si es o no mutante (la recta), así el tiempo el tiempo de ejecución se ve reducido a:
  
 - O(n^3), por una parte se tiene que recorrer la matriz, lo que tiene un costo de O(n^2) pero también se debe de realizar la verificación de las 6 rectas lo cual es O(n) (esto se logra usando el mismo índice para las 6).
  
