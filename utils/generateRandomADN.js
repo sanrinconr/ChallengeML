@@ -1,5 +1,5 @@
 /**
- * Generacion de un ADN de nxn sin ninguna repeticion (un adn humano)
+ * Generacion de un ADN de nxn aleatorio (muy probablemente sera un adn mutante si el n es grande)
  * @param  {} n Tamano de la matriz
  */
 function generateRandomADN(n) {
