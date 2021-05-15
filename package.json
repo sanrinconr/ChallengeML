@@ -2,14 +2,17 @@
   "name": "challengeml",
   "version": "1.0.0",
   "description": "Challenge para mercado libre",
-  "main": "app.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "mocha --timeout 30000 ",
-    "start": "node app.js",
-    "genData": "node utils/savePersistentData.js"
+    "genData": "node utils/savePersistentData.js",
+    "start": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
   },
   "repository": {
     "type": "git",
@@ -20,9 +23,19 @@
   "bugs": {
     "url": "https://github.com/sanrinconr/ChallengeML/issues"
   },
+  "engines": {
+    "node": "12"
+  },
   "homepage": "https://github.com/sanrinconr/ChallengeML#Examen-mercadolibre",
   "dependencies": {
     "chai": "^4.3.4",
+    "firebase-admin": "^9.2.0",
+    "firebase-functions": "^3.11.0",
+    "firebase-tools": "^9.10.2",
     "mocha": "^8.4.0"
-  }
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
 }
