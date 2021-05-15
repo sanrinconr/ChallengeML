@@ -66,5 +66,9 @@ La solución es crear una nueva diagonal que sea el espejo de la actual así:
 ![Nota 2](https://firebasestorage.googleapis.com/v0/b/challengeml-8e9b9.appspot.com/o/4Nota2.svg?alt=media)
 Lo mismo aplica para diagonal paralela y así entonces se tiene todo el tablero recorrido con las diagonales.
 Esto no afecta el rendimiento del programa.
+
+
+[Volver al readme principal](../README.md)
+
  
 

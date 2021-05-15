@@ -20,3 +20,6 @@ En caso de tener algún problema, ingresar directamente a:
  
 Google cloud functions impone un [limite de recursos](https://firebase.google.com/docs/functions/quotas#resource_limits), por lo que el tamaño de cada solicitud no puede superar los 10MB, lo cual genera el límite de que el tamaño máximo de la matriz enviada debe ser de aproximadamente 3000x3000 elementos (3162 es el valor exacto), en caso de sobrepasar estos límites se retornara un codigo de error HTTP 412 Request entity too large
 
+[Volver al readme principal](../README.md)
+
+
