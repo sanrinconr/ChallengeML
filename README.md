@@ -27,8 +27,8 @@ http://localhost:5001/challengeml-8e9b9/us-central1/
 
 # Documentacion
 - **[Inicio rapido](./docs/inicioRapido.md)**<br>
-- **[Implementacion del algoritmo](./docs/inicioRapido.md)**<br>
-- **[API REST](./docs/inicioRapido.md)**<br>
+- **[Implementacion del algoritmo](./docs/implementacionAlgoritmo.md)**<br>
+- **[API REST](./docs/apiRest.md)**<br>
 
 
 
