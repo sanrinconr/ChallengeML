@@ -1,5 +1,5 @@
 var assert = require("chai").assert;
-var isMutant = require("../functions/services/ADNService");
+var isMutant = require("../services/ADNService");
 let fs = require('fs');
 
 let human8 = fs.readFileSync('./test/dataTesting/human/data8.data').toString().split("\n");
