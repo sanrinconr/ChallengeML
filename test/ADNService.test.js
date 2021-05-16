@@ -1,4 +1,6 @@
 var assert = require("chai").assert;
+const expect = require("chai").expect;
+
 var isMutant = require("../services/ADNService");
 let fs = require('fs');
 
@@ -10,7 +12,7 @@ let mutant8 = fs.readFileSync('./test/dataTesting/mutants/data8.data').toString(
 let mutant100 = fs.readFileSync('./test/dataTesting/mutants/data100.data').toString().split("\n");
 let mutant1000 = fs.readFileSync('./test/dataTesting/mutants/data1000.data').toString().split("\n");
 
-describe("Validar ADN", function () {
+describe("VALIDACION ALGORITMO (LOCAL)", function () {
 	describe("Posiciones: ", function () {
 		it("Horizontal ", function () {
 			let data = ["ATCGATCG",
@@ -89,14 +91,7 @@ describe("Validar ADN", function () {
 						"GCTAACTA"]
 			assert.equal(isMutant(data), true)
 		});
-		let data = ["ATCGATCG",
-					"GCTAGCTA",
-					"ATCGATCG",
-					"GCTAGCTA",
-					"ATCGATCG",
-					"GCTAGCTA",
-					"ATCGATCG",
-					"GCTAGCTA"]
+		
 	});
 	describe("Lotes",function(){
 		describe("ADN Humano: ", function () {
@@ -106,9 +101,9 @@ describe("Validar ADN", function () {
 			it("100x100: ", function () {
 				assert.equal(isMutant(human100), false)
 			});
-			it("1000x1000 ", function () {
-				assert.equal(isMutant(human1000), false)
-			});
+			// it("1000x1000 ", function () {
+			// 	assert.equal(isMutant(human1000), false)
+			// });
 		});
 		describe("ADN Mutante: ", function () {
 			it("8x8 ", function () {
@@ -117,9 +112,9 @@ describe("Validar ADN", function () {
 			it("100x100: ", function () {
 				assert.equal(isMutant(mutant100), true)
 			});
-			it("1000x1000 ", function () {
-				assert.equal(isMutant(mutant1000), true)
-			});
+			// it("1000x1000 ", function () {
+			// 	assert.equal(isMutant(mutant1000), true)
+			// });
 		});
 	})
 

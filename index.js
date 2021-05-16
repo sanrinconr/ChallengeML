@@ -26,7 +26,6 @@ exports.mutant = functions.https.onRequest(async (request, response) => {
 		else return response.status(403).send()
 	}catch(err){
 		console.log(err.message)
-		console.log(err)
-		return response.status(400).send("Datos invalidos")
+		return response.status(400).send(err.message)
 	}
 });
