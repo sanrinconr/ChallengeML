@@ -12,7 +12,13 @@ En esta sección se pretende realizar un descripción de cuál es la funcionalid
  
 - `utils/` Herramientas desarrolladas para pruebas más eficientes como la generación de matrices de ADN grandes y conversión a JSON
  
-- `build/` Esta carpeta aparecerá solo si se generan matrices de prueba (si desea probar, ejecutar `npm run genData`, y esto generará varias matrices en build/)
+Los siguientes espacios se generaran condicionalmente
+
+- `build/` En esta carpeta se guardaran las matrices de prueba (si desea probar y generarlas, ejecutar `npm run genData`, y esto generará varias matrices, de 8x8, 100x100, 1000x1000 y 3000x3000)
+
+- `coverage/` Una vez se ejecutan los tests (`npm test`) se genera el reporte de cobertura, para visualizar los resultados abrir con un navegador el archivo `coverage/index.html`
+
+- `testReport/` Reporte de los tests realizados (realizar tests ejecutando `npm test`), para visualizar los resultados abrir con un navegador el archivo `testReport/mochaawesome.html`
  
 ## Flujo del proyecto
  
