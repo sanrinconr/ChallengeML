@@ -33,6 +33,8 @@ http://localhost:5001/challengeml-8e9b9/us-central1/
 - **[Implementación del algoritmo](./docs/implementacionAlgoritmo.md)**<br>
 - **[Estructura del proyecto](./docs/estructura.md)**<br>
 - **[API REST](./docs/apiRest.md)**<br>
+- **[Base de datos](./docs/baseDeDatos.md)**<br>
+
  
  
  
