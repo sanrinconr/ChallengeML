@@ -37,7 +37,7 @@ exports.stats = functions.https.onRequest(async(req,res)=>{
 	let out = {
 		count_mutant_dna: counts.countMutant,
 		count_human_dna: counts.countHuman,
-		ratio: counts.countMutant/counts.countHuman
+		ratio: Math.round(Number(counts.countMutant/counts.countHuman) * 100) / 100
 	}
 	return res.send(out)
 })
