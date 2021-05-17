@@ -27,6 +27,8 @@ Una vez realizados estos pasos se podrá acceder a la emulación local de la api
 ```
 http://localhost:5001/challengeml-8e9b9/us-central1/
 ```
+
+(Al ejecutar `npm start` se dara inicio a la api junto a la base de datos de prueba)
  
 # Documentación
 - **[Inicio rápido](./docs/inicioRapido.md)**<br>
@@ -34,6 +36,8 @@ http://localhost:5001/challengeml-8e9b9/us-central1/
 - **[Estructura del proyecto](./docs/estructura.md)**<br>
 - **[API REST](./docs/apiRest.md)**<br>
 - **[Base de datos](./docs/baseDeDatos.md)**<br>
+- **[Testing](./docs/testing.md)**<br>
+- **[Costos](./docs/costos.md)**<br>
 
  
  
