@@ -21,7 +21,7 @@ function _letrasValidas(...args) {
  */
 function isMutant(dataStrings) {
 	//Debe ser n*n
-	if (dataStrings.length !== dataStrings[0].length) throw new Error({name:"Matriz no cuadrada", message:`La matriz es ${dataStrings.length}x${dataStrings[0].length} mas no NxN como es requerido`})
+	if (dataStrings.length !== dataStrings[0].length) throw new Error("Matriz no cuadrada", `La matriz es ${dataStrings.length}x${dataStrings[0].length} mas no NxN como es requerido`)
 	const n = dataStrings.length
 	for (let i = 0; i < n; i++) {
 		let memory = ["","","","","",""] //6 rectas a validar en cada iteracion
@@ -34,7 +34,7 @@ function isMutant(dataStrings) {
 			let actualDIinf = n - 1 - j + i < n ? dataStrings[j][n - 1 - j + i] : null //n-1, se quiere empezar desde el otro extremo, -j para hacer la diagonal, +i para controlar que tan arriba o abajo va la recta
 			let actualDIsup = n - 1 - j - i >= 0 ? dataStrings[j][n - 1 - j - i] : null
 
-			if (!_letrasValidas(actualHor, actualVer, actualIDinf, actualDIinf)) throw new Error({name:"Caracter invalido", message:`Letra invalida detectada (${dataStrings[i][j]}) en la fila ${i} ${dataStrings[i]}`})
+			if (!_letrasValidas(actualHor, actualVer, actualIDinf, actualDIinf)) throw new Error("Caracter invalido", `Letra invalida detectada (${dataStrings[i][j]}) en la fila ${i} ${dataStrings[i]}`)
 
 			//COMPROBACIONES MUTANTE O NO (las 6 rectas)
 			for (let k = 0; k < memory.length; k++) {
