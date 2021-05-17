@@ -5,6 +5,7 @@ admin.initializeApp();
 const MD5 = require("crypto-js/md5");
 const { getADN } = require("./services/db/getADN");
 const { saveADN } = require("./services/db/saveADN");
+const { incrementCounter, getCounts } = require("./services/db/counter");
 
 exports.mutant = functions.https.onRequest(async (request, response) => {
 	try{
@@ -22,6 +23,7 @@ exports.mutant = functions.https.onRequest(async (request, response) => {
 		}
 		let mutant = isMutant(data.dna)
 		await saveADN(hashADN, mutant)
+		await incrementCounter(mutant)
 		if (mutant) return response.status(200).send();
 		else return response.status(403).send()
 	}catch(err){
@@ -29,3 +31,14 @@ exports.mutant = functions.https.onRequest(async (request, response) => {
 		return response.status(400).send(err.message)
 	}
 });
+
+exports.stats = functions.https.onRequest(async(req,res)=>{
+	let counts = await getCounts()
+	let out = {
+		count_mutant_dna: counts.countMutant,
+		count_human_dna: counts.countHuman,
+		ratio: counts.countMutant/counts.countHuman
+	}
+	return res.send(out)
+})
+

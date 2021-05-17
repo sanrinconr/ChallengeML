@@ -1,12 +1,8 @@
 const assert = require('assert');
 const Supertest = require('supertest');
-const supertest = Supertest(process.env.BASE_URL);
+const supertest = Supertest("http://localhost:5001/challengeml-8e9b9/us-central1");
 
-if(!process.env.BASE_URL){
-    console.log("No existe variable de entorno BASE_URL, definirla asi: \n\nexport BASE_URL=http://localhost:5001/challengeml-8e9b9/us-central1")
-    return true
-}
-describe(`VALIDACION DE LA API (Ubicacion api: ${process.env.BASE_URL}` , function(){
+describe(`VALIDACION DE LA API (Ubicacion api: http://localhost:5001/challengeml-8e9b9/us-central1` , function(){
     describe('Endpoint /mutant/', () => {
         it('Si se envia un adn mutante debe retornar 200 OK', async () => {
             try{
